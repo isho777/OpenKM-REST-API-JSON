@@ -1,0 +1,1576 @@
+{
+	"info": {
+		"_postman_id": "f6d18163-d95f-4316-bf8b-ce0e2076b727",
+		"name": "OKMdocument",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20023880"
+	},
+	"item": [
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "document/cancelCheckout *",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docId",
+									"value": "",
+									"description": "Error 500 can be caused by non existent document Or document was not checked out. Doc must be already chcked out",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/cancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"cancelCheckout"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/checkin *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data; boundary=<calculated when request is sent>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==",
+									"description": "base64 file",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "Edited...",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/checkin",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"checkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/checkout *",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/checkout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"checkout"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/copy?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"copy"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/create?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/createSimple  *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docPath",
+									"value": "/okm:root//TestDoc3.pdf",
+									"description": "full path name",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "aasdddgfhfdhgfd54654",
+									"description": "??same ad doc Id?? set internally",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==",
+									"description": "base64 file format ",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Govt plans",
+									"type": "text"
+								},
+								{
+									"key": "version",
+									"value": "2.0",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/createSimple",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"createSimple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getContent  *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/octet-stream",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getContent?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getContent"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "35781e60-842c-4fea-b111-3f9ef894831b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/delete *",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/delete?docId=466c39df-305b-4440-991c-c587c2c7b107",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "466c39df-305b-4440-991c-c587c2c7b107"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/forceCancelCheckout  *",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/forceCancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"forceCancelCheckout"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getChildren",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getChildren?fldId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getChildren"
+							],
+							"query": [
+								{
+									"key": "fldId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getContentByVersion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getContentByVersion?docId=&versionId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getContentByVersion"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "versionId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getLockInfo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getLockInfo?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getLockInfo"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getPath/{uuid}",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getPath/:uuid?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getPath",
+								":uuid"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getProperties",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getProperties?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getProperties"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getVersionHistory",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getVersionHistory?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getVersionHistory"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/getVersionHistorySize",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getVersionHistorySize?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"getVersionHistorySize"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/isCheckedOut *",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isCheckedOut?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"isCheckedOut"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "c10298e0-1007-4956-950a-2338a0a04ac3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/isLocked",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isLocked?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"isLocked"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/isValid",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isValid?docId=&",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"isValid"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": ""
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/move",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/move?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"move"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/purge",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/purge?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"purge"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/purgeVersionHistory",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/purgeVersionHistory?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"purgeVersionHistory"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/rename",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/rename?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"rename"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/restoreVersion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/restoreVersion?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"restoreVersion"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/setProperties",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/setProperties?",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"setProperties"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/forceUnlock *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docId",
+									"value": "35781e60-842c-4fea-b111-3f9ef894831b",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/forceUnlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"forceUnlock"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "35781e60-842c-4fea-b111-3f9ef894831b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/lock        *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/lock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"lock"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "35781e60-842c-4fea-b111-3f9ef894831b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "document/unlock  *",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "okmAdmin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/unlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"protocol": "http",
+							"host": [
+								"13",
+								"245",
+								"80",
+								"133"
+							],
+							"port": "8080",
+							"path": [
+								"OpenKM",
+								"services",
+								"rest",
+								"document",
+								"unlock"
+							],
+							"query": [
+								{
+									"key": "docId",
+									"value": "35781e60-842c-4fea-b111-3f9ef894831b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "/"
+		}
+	]
+}
