@@ -48,13 +48,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/cancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/cancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -139,13 +139,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/checkin",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/checkin",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -193,13 +193,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/checkout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/checkout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -244,13 +244,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/copy?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/copy?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -295,13 +295,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/create?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/create?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -392,13 +392,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/createSimple",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/createSimple",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -444,13 +444,13 @@
 							}
 						],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getContent?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getContent?docId=35781e60-842c-4fea-b111-3f9ef894831b",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -491,13 +491,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/delete?docId=466c39df-305b-4440-991c-c587c2c7b107",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/delete?docId=466c39df-305b-4440-991c-c587c2c7b107",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -538,13 +538,13 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/forceCancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/forceCancelCheckout?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -585,13 +585,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getChildren?fldId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getChildren?fldId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -636,13 +636,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getContentByVersion?docId=&versionId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getContentByVersion?docId=&versionId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -691,13 +691,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getLockInfo?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getLockInfo?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -742,13 +742,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getPath/:uuid?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getPath/:uuid?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -796,13 +796,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getProperties?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getProperties?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -847,13 +847,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getVersionHistory?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getVersionHistory?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -898,13 +898,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/getVersionHistorySize?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/getVersionHistorySize?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -949,13 +949,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isCheckedOut?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/isCheckedOut?docId=c10298e0-1007-4956-950a-2338a0a04ac3",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -996,13 +996,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isLocked?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/isLocked?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1047,13 +1047,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/isValid?docId=&",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/isValid?docId=&",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1102,13 +1102,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/move?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/move?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1153,13 +1153,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/purge?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/purge?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1204,13 +1204,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/purgeVersionHistory?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/purgeVersionHistory?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1255,13 +1255,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/rename?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/rename?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1306,13 +1306,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/restoreVersion?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/restoreVersion?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1357,13 +1357,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/setProperties?",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/setProperties?",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1420,13 +1420,13 @@
 							]
 						},
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/forceUnlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/forceUnlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1485,13 +1485,13 @@
 							}
 						],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/lock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/lock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
@@ -1543,13 +1543,13 @@
 							}
 						],
 						"url": {
-							"raw": "http://xxx.xxx.xxx.xxx:8080/OpenKM/services/rest/document/unlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
+							"raw": "http://111.222.333.444:8080/OpenKM/services/rest/document/unlock?docId=35781e60-842c-4fea-b111-3f9ef894831b",
 							"protocol": "http",
 							"host": [
-								"13",
-								"245",
-								"80",
-								"133"
+								"111",
+								"222",
+								"333",
+								"444"
 							],
 							"port": "8080",
 							"path": [
